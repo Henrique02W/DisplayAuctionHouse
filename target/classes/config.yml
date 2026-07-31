@@ -1,0 +1,62 @@
+# ============================================
+#         DisplayAuctionHouse Config
+# ============================================
+
+# Taxa cobrada sobre cada venda (0.0 = sem taxa, 0.1 = 10%, etc.)
+tax-rate: 0.05
+
+# Tempo em horas para um item expirar no display (0 = nunca expira)
+listing-duration-hours: 48
+
+# Preço mínimo permitido para listagem
+min-price: 1.0
+
+# Preço máximo permitido para listagem
+max-price: 10000000.0
+
+# Máximo de itens que um player pode ter listados ao mesmo tempo
+max-listings-per-player: 5
+
+# Mensagens do plugin
+messages:
+  prefix: "&8[&6AH&8] &r"
+  no-permission: "&cVocê não tem permissão para isso."
+  display-created: "&aDisplay criado com sucesso! ID: &e{id}"
+  display-removed: "&aDisplay removido."
+  display-not-found: "&cDisplay não encontrado."
+  item-listed: "&aSeu item foi colocado à venda por &e${price}&a!"
+  item-sold: "&aSeu item foi vendido por &e${price}&a! Taxa: &c${tax}&a. Você recebeu: &e${received}&a."
+  item-bought: "&aVocê comprou &e{item}&a por &e${price}&a!"
+  item-expired: "&eSeu item &f{item}&e expirou e foi enviado para sua caixa de entrada."
+  item-bought-full-inv: "&eSua compra foi enviada para sua caixa de entrada pois seu inventário estava cheio."
+  inbox-empty: "&7Sua caixa de entrada está vazia."
+  display-occupied: "&cEste display já está ocupado."
+  display-empty-slot: "&aDisplay vazio. Clique com shift+right para listar um item."
+  not-enough-money: "&cVocê não tem dinheiro suficiente. Preço: &e${price}"
+  your-own-listing: "&cVocê não pode comprar seu próprio item."
+  max-listings-reached: "&cVocê atingiu o limite de &e{max}&c itens listados."
+  invalid-price: "&cPreço inválido. Use um número entre &e${min}&c e &e${max}&c."
+  no-item-hand: "&cVocê precisa segurar um item na mão."
+  item-removed: "&aSeu item foi removido da venda e devolvido."
+  vault-not-found: "&cVault não encontrado! O plugin não funcionará sem economia."
+  display-interact-info: |
+    &8&m-----------&8[ &6AH Display &8]&m-----------
+    &7Vendedor: &f{seller}
+    &7Item: &f{item}
+    &7Preço: &e${price}
+    &7Expira em: &f{expires}
+    &8&l[&a&lCLIQUE DIREITO&8&l] &7para comprar
+    &8&l[&c&lSHIFT+DIREITO&8&l] &7para remover (se seu item)
+
+# Configuração visual dos displays físicos
+display:
+  # Material do bloco pedestal (nome do enum Material do Bukkit)
+  pedestal-material: QUARTZ_PILLAR
+  # Material da placa wall sign (OAK_WALL_SIGN, SPRUCE_WALL_SIGN, etc.)
+  sign-material: SPRUCE_WALL_SIGN
+  # Velocidade de rotação do item flutuante (graus por tick, 0 = parado)
+  rotation-speed: 1.5
+  # Altura do centro do item acima do topo do pedestal (em blocos)
+  item-height: 0.3
+  # Escala do item (1.0 = tamanho normal, 0.5 = metade, 1.5 = maior)
+  item-scale: 0.3
