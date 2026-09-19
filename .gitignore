@@ -1,0 +1,23 @@
+# Build
+target/
+build/
+out/
+*.class
+dependency-reduced-pom.xml
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+*.code-workspace
+
+# Servidor de teste local
+run/
+server/
+
+# Sistema
+.DS_Store
+Thumbs.db

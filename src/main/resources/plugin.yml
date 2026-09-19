@@ -1,9 +1,10 @@
 name: DisplayAuctionHouse
-version: '1.0.0'
-main: com.displayah.DisplayAuctionHouse
-api-version: '1.21'
-description: Auction House com display fisico no mundo
+version: ${project.version}
+main: io.github.henrique02w.displayauctionhouse.DisplayAuctionHouse
+api-version: "26.2"
+description: Auction House com displays fisicos no mundo
 authors: [ Henrique02W ]
+website: https://github.com/Henrique02W/DisplayAuctionHouse
 softdepend:
   - Vault
 
@@ -17,6 +18,10 @@ permissions:
   dah.admin:
     description: Permissão de admin do DisplayAuctionHouse
     default: op
+    children:
+      dah.sell: true
+      dah.buy: true
+      dah.inbox: true
   dah.sell:
     description: Permissão de player para vender
     default: true
